@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureSelf - Behavioral Trajectory Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              slate: {
+                850: '#151F32',
+                900: '#0F172A',
+                950: '#050a14', // Darker background for neon contrast
+              },
+              neon: {
+                blue: '#00f3ff',
+                pink: '#ff00ff',
+                purple: '#bc13fe',
+                green: '#0aff00',
+                yellow: '#faff00',
+                orange: '#ff8a00'
+              }
+            },
+            boxShadow: {
+              'neon-blue': '0 0 10px #00f3ff, 0 0 20px #00f3ff44',
+              'neon-pink': '0 0 10px #ff00ff, 0 0 20px #ff00ff44',
+              'neon-green': '0 0 10px #0aff00, 0 0 20px #0aff0044',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050a14;
+        color: #f8fafc;
+      }
+      /* Custom Slider Styles */
+      input[type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+        background: transparent;
+      }
+      
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+      }
+
+      input[type=range]:focus {
+        outline: none;
+      }
+
+      input[type=range]::-ms-track {
+        width: 100%;
+        cursor: pointer;
+        background: transparent; 
+        border-color: transparent;
+        color: transparent;
+      }
+
+      .glossary-term {
+        border-bottom: 2px dotted #00f3ff;
+        cursor: pointer;
+        color: #00f3ff;
+        transition: all 0.2s;
+      }
+      .glossary-term:hover {
+        background-color: rgba(0, 243, 255, 0.1);
+        text-shadow: 0 0 8px #00f3ff;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#050a14] text-slate-100 transition-colors duration-300 selection:bg-neon-pink selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

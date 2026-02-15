@@ -1,0 +1,8 @@
+{
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "name": "FutureSelf",
+  "description": "An AI-powered behavioral trajectory simulator helping students visualize the long-term impact of their daily habits."
+}
